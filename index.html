@@ -12,21 +12,42 @@
         <h2>Login</h2>
         <form>
             <div class="input-name">
-                <input type="text" placeholder="Usuario" required>
+                <input type="text" placeholder="Usuario" required id="user">
                 <i class="bx bxs-user"></i>
             </div>
 
             <div class="input-password"> 
-                <input type="password" placeholder="Senha" required>
+                <input type="password" placeholder="Senha" required id="user-pass">
                 <i class="bx bxs-lock-alt"></i>
             </div>
 
-            <button type="submit">Entrar</button>
-            <a href="#">Esqueceu sua senha?</a>
+            <input type="submit" class="enviar" onclick="logar(); return false">
+           
 
 
         </form>
     </div>
+
+    <script>
+
+        function logar(){
+
+            var login = document.getElementById("user").value;
+            var senha = document.getElementById("user-pass").value;
+
+            if(login == "admin" && senha =="admin"){
+                alert("Sucesso");
+                location.href = "home.html";
+            }else{
+                alert("usuario incorreto")
+            }
+
+        }
+
+    </script>
+
+
+
     
 </body>
 </html>
